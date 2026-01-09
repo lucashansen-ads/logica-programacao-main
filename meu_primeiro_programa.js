@@ -1,7 +1,9 @@
 // Meu primeiro programa em JavaScript
 // Autor: Lucas Hansen
 
-let numero = 6;
+const prompt = require('prompt-sync')();
+//Solicitar ao usuário que insira um número
+const numero = parseInt(prompt("Digite um número inteiro: "));
 
 // Verificar se é par ou ímpar
 if (numero % 2 === 0) {
