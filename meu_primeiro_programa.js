@@ -1,52 +1,60 @@
 // Meu primeiro programa em JavaScript
 // Autor: Lucas Hansen
 
-function verificarNumeroImparouPar(numero) {
-    if (numero % 2 === 0) {
-        console.log("O numero é par");
-    } else {
-        console.log("O numero é impar");
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
 const prompt = require("prompt-sync")();
-//Solicitar ao usuário que insira um número
-const numero = parseInt(prompt("Digite um número inteiro: "));
 
-// Verificar se é par ou ímpar
-function verificarNumeroImparouPar(numero) {
+// Função: par ou ímpar
+function verificarNumeroImparOuPar(numero) {
     if (numero % 2 === 0) {
         console.log("O número é par");
     } else {
         console.log("O número é ímpar");
     }
 }
-// Verificar se é positivo, negativo ou zero
-function verificarsinaldoNumero(numero) {}
-    if(numero > 0) {
-        console.log("O numero é positivo");
-    } else if(numero < 0) {
-        console.log("O numero é negativo");
+
+// Função: positivo, negativo ou zero
+function verificarSinalDoNumero(numero) {
+    if (numero > 0) {
+        console.log("O número é positivo");
+    } else if (numero < 0) {
+        console.log("O número é negativo");
     } else {
-        console.log("O numero é zero");
+        console.log("O número é zero");
     }
+}
 
+// Função: tabuada
+function mostrarTabuada(numero) {
+    console.log("Tabuada do " + numero + ":");
+    for (let i = 0; i <= 10; i++) {
+        console.log(numero + " x " + i + " = " + (numero * i));
+    }
+}
 
-// Mostrar tabuada do numero
-console.log("Tabuada do " + numero + ":");
+// ===== MENU =====
+console.log("Escolha uma opção:");
+console.log("1 - Verificar se o número é par ou ímpar");
+console.log("2 - Verificar se o número é positivo, negativo ou zero");
+console.log("3 - Mostrar tabuada");
+console.log("0 - Sair");
 
+const opcao = prompt("Digite a opção desejada: ");
 
-for(let i = 0; i <= 10; i++) {
-    console.log(numero + "x" + i + "=" + (numero * i))
+if (opcao === "1") {
+    const numero = parseInt(prompt("Digite um número: "));
+    verificarNumeroImparOuPar(numero);
+
+} else if (opcao === "2") {
+    const numero = parseInt(prompt("Digite um número: "));
+    verificarSinalDoNumero(numero);
+
+} else if (opcao === "3") {
+    const numero = parseInt(prompt("Digite um número: "));
+    mostrarTabuada(numero);
+
+} else if (opcao === "0") {
+    console.log("Encerrando o programa...");
+
+} else {
+    console.log("Opção inválida");
 }
