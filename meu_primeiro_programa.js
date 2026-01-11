@@ -31,30 +31,40 @@ function mostrarTabuada(numero) {
     }
 }
 
-// ===== MENU =====
-console.log("Escolha uma opção:");
-console.log("1 - Verificar se o número é par ou ímpar");
-console.log("2 - Verificar se o número é positivo, negativo ou zero");
-console.log("3 - Mostrar tabuada");
-console.log("0 - Sair");
 
-const opcao = prompt("Digite a opção desejada: ");
 
-if (opcao === "1") {
-    const numero = parseInt(prompt("Digite um número: "));
-    verificarNumeroImparOuPar(numero);
+let opcao = "";
 
-} else if (opcao === "2") {
-    const numero = parseInt(prompt("Digite um número: "));
-    verificarSinalDoNumero(numero);
+while (opcao !== "0") {
 
-} else if (opcao === "3") {
-    const numero = parseInt(prompt("Digite um número: "));
-    mostrarTabuada(numero);
+    console.log("\nEscolha uma opção:");
+    console.log("1 - Verificar se o número é par ou ímpar");
+    console.log("2 - Verificar se o número é positivo, negativo ou zero");
+    console.log("3 - Mostrar tabuada");
+    console.log("0 - Sair");
 
-} else if (opcao === "0") {
-    console.log("Encerrando o programa...");
+    opcao = prompt("Digite a opção desejada: ");
 
-} else {
-    console.log("Opção inválida");
+    if (opcao === "1") {
+        const numero = parseInt(prompt("Digite um número: "));
+        verificarNumeroImparOuPar(numero);
+
+    } else if (opcao === "2") {
+        const numero = parseInt(prompt("Digite um número: "));
+        verificarSinalDoNumero(numero);
+
+    } else if (opcao === "3") {
+        const numero = parseInt(prompt("Digite um número: "));
+        mostrarTabuada(numero);
+
+    } else if (opcao === "0") {
+        console.log("Encerrando o programa...");
+
+    } else {
+        console.log("Opção inválida");
+    }
+
+    if (opcao !== "0") {
+        prompt("\nPressione Enter para continuar...");
+    }
 }
