@@ -31,6 +31,39 @@ function mostrarTabuada(numero) {
     }
 }
 
+//Função de validação de entrada
+function lerNumeroValido() {
+    let valor;
+
+    while (true) { 
+        valor = prompt("Digite um numero: "); 
+
+        if (valor.trim() === "") { 
+            console.log("Entrada vazia, tente novamente.");
+            continue;
+        }
+
+        const numero = numero = Number(valor);
+
+        if (!isNaN(numero)) {
+            console.log("Isso não é um numero valido.");
+        } else {
+            return numero;
+        }
+    }
+}        
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 let opcao = "";
